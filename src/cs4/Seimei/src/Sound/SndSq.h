@@ -3,5 +3,5 @@
 #include "common.h"
 
 void SND_SqFadeStart(PORT port, FADE fade);
-int SND_SqPlay(PORT port, int iBlockNum);
+int SND_SqPlay(u8 port, int iBlockNum);
 #endif // SND_SQ_H

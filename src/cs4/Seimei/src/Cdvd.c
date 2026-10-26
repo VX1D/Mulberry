@@ -3,6 +3,11 @@
 #include "ee/eeregs.h"
 #include "Memory.h"
 
+static CDVDREADST CdvdReadSt[256];
+static LPSETCDVD* lpSetCdvd = (LPSETCDVD* )CdvdReadSt;
+static LPLASTCDVD* lpLastCdvd = (LPLASTCDVD* )CdvdReadSt;
+static LPCDVDREAD* lpCdvdRead = (LPCDVDREAD* )CdvdReadSt;
+
 static u_int CdvdAsync(void);
 
 
@@ -174,7 +179,7 @@ int CdvdRead(char * filename, int size, u_char * * lpBuf, u_char bSynch, int ind
 
         if (lpSetCdvd->size <= 0) lpSetCdvd->size = lpSetCdvd->cdlfile.size;
 
-            lpCdvdRead->sector = (lpCdvdRead->size + SECTOR_SIZE - 1) / SECTOR_SIZE;
+            lpSetCdvd->sector = (lpSetCdvd->size + SECTOR_SIZE - 1) / SECTOR_SIZE;
 
 
 
@@ -254,6 +259,8 @@ int CdvdRead(char * filename, int size, u_char * * lpBuf, u_char bSynch, int ind
 
 
 
+extern void FontPrintXY(float, float, char *, ...);
+
 u_int CdvdAsyncProc(int bDraw /* r16 */) {
 
     GlobalLoadTimer = 0;
@@ -279,6 +286,7 @@ u_int CdvdAsyncProc(int bDraw /* r16 */) {
 
     return 0;
 }
+
 
 
 
@@ -459,12 +467,14 @@ static u_int CdvdAsync(void) {
 }
 
 
-static inline char* foo() {
-    printf("\\%s;1");
-}
 
 
 
 int CdvdCheckAsyncBusy(void) { return lpLastCdvd->state != 0;
 
+}
+
+/* unreferenced in the shipped image (mwld dead-strips it); its literal fixes the .rodata order */
+void Cdvd_DeadStripped(s8 *full, s8 *fname) {
+    sprintf(full, "\\%s;1", fname);
 }

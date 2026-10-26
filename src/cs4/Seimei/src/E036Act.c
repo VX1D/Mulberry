@@ -1,3 +1,7 @@
 #include "common.h"
 
-INCLUDE_ASM("config/asm/nonmatchings/cs4/Seimei/src/E036Act", E036ActInit);
+/* E036ActInit @ 0x2018E0 .. 0x2018E8 (0x8 bytes) */
+
+void E036ActInit(void) {
+    return;
+}

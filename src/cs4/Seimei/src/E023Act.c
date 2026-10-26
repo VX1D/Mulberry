@@ -1,3 +1,7 @@
 #include "common.h"
 
-INCLUDE_ASM("config/asm/nonmatchings/cs4/Seimei/src/E023Act", E023ActInit);
+/* E023ActInit @ 0x215590 .. 0x215598 (0x8 bytes) */
+
+void E023ActInit(void) {
+    return;
+}

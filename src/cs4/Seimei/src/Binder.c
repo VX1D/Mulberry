@@ -7,13 +7,14 @@
 
 static unsigned int AllBindDataNum; // size: 0x4, address: 0x257964
 
-static LPCDVD CdvdAllBind;
+static LPCDVD CdvdAllBind __attribute__((aligned(128)));
 
 static LPCDVD *lpCdvd = &CdvdAllBind;
 
 static BINDINFO AllBindInfo[3200];
 
-static inline unsigned int foo_fn(char* fname) {
+static inline unsigned int foo_fn(char* s) {
+    char* fname = s;
     unsigned int hash = 0;
     int i = 0;
     int foo[32] = {
@@ -38,12 +39,14 @@ static inline unsigned int foo_fn(char* fname) {
         0x244D,         0x25AB,         0x2719,         0x2875
     };
     
-    for (; *fname != 0; fname++) {
-        
-        if (++i >= 32u) {
-            do { } while( 1 );
-        }
-        hash += bar[i] * foo[i] * *fname;
+    if (*s != 0) {
+        do {
+            if (++i >= 32u) {
+                do { } while( 1 );
+            }
+            hash += bar[i] * foo[i] * *(volatile char *)fname;
+            fname++;
+        } while (*fname != 0);
     }
     return hash;
 }
@@ -141,9 +144,11 @@ void SetAllBindInfo(void) {
                          (void *)&lpCdvd->sname) == 0)
     ;
   FlushCache(0);
-  while (sceCdRead(lpCdvd->cdlfile.lsn, lpCdvd->sector, lpCdvd->lpDmyData,
-                   &CdRMode) == 0)
-    ;
+  while (1) {
+    u32 sec = lpCdvd->sector;
+    if (sceCdRead(lpCdvd->cdlfile.lsn, sec, lpCdvd->lpDmyData, &CdRMode) != 0)
+      break;
+  }
   sceCdSync(0);
   memset(AllBindInfo, 0, sizeof(AllBindInfo));
 
@@ -166,6 +171,7 @@ void SetAllBindInfo(void) {
   }
   MemFree(lpCdvd->lpDmyData);
 }
+
 
 void GetAllBindInfo(char *fname /* r2 */, unsigned int *lsn /* r2 */,
                     unsigned int *size /* r2 */) {

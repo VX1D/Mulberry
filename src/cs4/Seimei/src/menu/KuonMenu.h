@@ -24,5 +24,6 @@ enum _KUON_MENU__RELOAD_FLAG_EN {
 int KnMenuMng_Update(int call_check /* r16 */);
 int KnMenuMng_Draw();
 int KnMenuMng_Crean();
+void KnMenuMng_CallMenu(u16 ctrl_id, s32 menu_id);
 
 #endif // KUONMENU_H

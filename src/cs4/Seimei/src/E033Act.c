@@ -1,7 +1,79 @@
 #include "common.h"
 
-INCLUDE_ASM("config/asm/nonmatchings/cs4/Seimei/src/E033Act", SetE033Dead);
+/* SetE033Dead @ 0x201820 .. 0x201838 (0x18 bytes) */
+/*
+ * dcomp notes:
+ *   fpu: mtc1 reinterprets zero at 0x201828
+ *   tail: j ChangeAnimParam at 0x201830 leaves the function
+ *   a0 forwarded to ChangeAnimParam
+ */
 
-INCLUDE_ASM("config/asm/nonmatchings/cs4/Seimei/src/E033Act", E033ActDead);
+extern unsigned int ChangeAnimParam(void *, signed int, float);
 
-INCLUDE_ASM("config/asm/nonmatchings/cs4/Seimei/src/E033Act", E033ActInit);
+/* E033ActDead @ 0x201840 .. 0x2018B4 (0x74 bytes, frame 0x30) */
+/*
+ * dcomp notes:
+ *   fpu: float literal 0x43020000 at 0x201874
+ */
+
+extern unsigned int CheckAnimNumFrame(void *, float);
+extern void EneDeadProc(void *, void *);
+
+/* dcomp: prototypes for definition reordering (MWCC -inline deferred emits functions in reverse order) */
+u8 * E033ActInit(s32 a0 , u32 *a1 );
+static void E033ActDead(void *a0 , void *a1 );
+static void SetE033Dead(void *a0 , void *a1 );
+
+
+/* E033ActInit @ 0x2018C0 .. 0x2018DC (0x1c bytes) */
+/*
+ * dcomp notes:
+ *   a0 takes slot 0 only because of the ABI order
+ *   return without a value in a non-void function
+ */
+
+
+
+
+u8 * E033ActInit(s32 a0 /* r4 */, u32 *a1 /* r5 */) {
+    u8 *v1;
+
+    v1 = (u8 *)E033ActDead;
+    *(u32 *)(((u8 *)a1 + 0x90)) = (u32)E033ActDead;
+    v1 = (u8 *)SetE033Dead;
+    *(u32 *)(((u8 *)a1 + 0x110)) = (u32)SetE033Dead;
+    return;
+}
+
+static void E033ActDead(void *a0 /* r4 */, void *a1 /* r5 */) {
+    u8 *s0;
+    s32 v1;
+    s32 v0;
+    void *a0_s1; // a0
+
+    v1 = 0x5a;
+    s0 = (u8 *)a1;
+    a1 = (void *)*(s16 *)(((u8 *)a0 + 0x104));
+    a0_s1 = (void *)*(s32 *)(((u8 *)a0 + 0x100));
+    switch ((u32)a1) {
+    case 90:
+        v0 = CheckAnimNumFrame(a0_s1, 130.0f);
+        if ((u32)v0 == 0) {
+            break;
+        }
+        v0 = 1;
+        a0_s1 = a0;
+        *(u8 *)(s0 + 0x1f3) = v0;
+        a1 = (void *)s0;
+        EneDeadProc(a0_s1, a1);
+    }
+    return;
+}
+
+static void SetE033Dead(void *a0 /* r4 */, void *a1 /* r5 */) {
+    *(u8 *)(((u8 *)a1 + 0x180)) = 4;
+    a1 = (void *)(s32)0x5a;
+    ChangeAnimParam(a0, (signed int)a1, (float)({ float native_result_0; __asm__("mtc1 %1,%0" :
+        "=f"(native_result_0) : "r"((u32)0)); native_result_0; }));
+    return;
+}

@@ -1,0 +1,750 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="710" font-family="ui-sans-serif,system-ui,Segoe UI,Helvetica,Arial" font-size="13">
+<rect width="100%" height="100%" fill="#0d1117"/>
+<text x="20" y="32" fill="#e6edf3" font-size="20" font-weight="600">Kuon (SLUS_210.07) decompilation</text>
+<text x="20" y="58" fill="#e6edf3">Functions matched (checksum MATCH)</text>
+<text x="980" y="58" fill="#e6edf3" text-anchor="end">2901/2901 (100.0%)</text>
+<rect x="20" y="64" width="960" height="14" rx="3" fill="#21262d"/>
+<rect x="20" y="64" width="960.0" height="14" rx="3" fill="#3fb950"/>
+<text x="20" y="100" fill="#e6edf3">Functions in clean C — 118 still use inline asm (42 files)</text>
+<text x="980" y="100" fill="#e6edf3" text-anchor="end">2783/2901 (95.9%)</text>
+<rect x="20" y="106" width="960" height="14" rx="3" fill="#21262d"/>
+<rect x="20" y="106" width="921.0" height="14" rx="3" fill="#3fb950"/>
+<rect x="941.0" y="106" width="39.0" height="14" fill="#d29922"/>
+<text x="20" y="138" fill="#8b949e">Units by code size — <tspan fill="#3fb950">■</tspan> clean C  <tspan fill="#d29922">■</tspan> functions with inline asm (88032/956924 bytes, 9.2%)</text>
+<g><title>cs4/Seimei/src/menu/menu_util: 72968 B code, 11872 B in inline-asm functions</title>
+<rect x="20.0" y="150.0" width="157.3" height="242.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="20.0" y="352.7" width="157.3" height="39.4" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="24.0" y="164.0" fill="#0d1117" font-size="11">menu_util</text>
+</g>
+<g><title>cs4/Seimei/src/sfx/PtclMng: 53656 B code, 39956 B in inline-asm functions</title>
+<rect x="20.0" y="392.1" width="157.3" height="178.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="20.0" y="437.5" width="157.3" height="132.6" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="24.0" y="406.1" fill="#0d1117" font-size="11">PtclMng</text>
+</g>
+<g><title>cs4/Seimei/src/sfx/SfxMng: 30124 B code, 6804 B in inline-asm functions</title>
+<rect x="20.0" y="570.1" width="157.3" height="99.9" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="20.0" y="647.4" width="157.3" height="22.6" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="24.0" y="584.1" fill="#0d1117" font-size="11">SfxMng</text>
+</g>
+<g><title>cs4/Seimei/src/Title: 27928 B code, 1036 B in inline-asm functions</title>
+<rect x="177.3" y="150.0" width="109.8" height="132.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="177.3" y="277.7" width="109.8" height="4.9" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="181.3" y="164.0" fill="#0d1117" font-size="11">Title</text>
+</g>
+<g><title>unklib_00195CA0: 23672 B code, 1116 B in inline-asm functions</title>
+<rect x="177.3" y="282.7" width="109.8" height="112.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="177.3" y="389.8" width="109.8" height="5.3" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/menu/KnMenuModel: 19632 B code, 0 B in inline-asm functions</title>
+<rect x="177.3" y="395.1" width="109.8" height="93.3" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="181.3" y="409.1" fill="#0d1117" font-size="11">KnMenuModel</text>
+</g>
+<g><title>cs4/Seimei/fslib/lib/fslibmc: 19152 B code, 0 B in inline-asm functions</title>
+<rect x="177.3" y="488.4" width="109.8" height="91.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="181.3" y="502.4" fill="#0d1117" font-size="11">fslibmc</text>
+</g>
+<g><title>unklib_00217A70: 19080 B code, 0 B in inline-asm functions</title>
+<rect x="177.3" y="579.4" width="109.8" height="90.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/MGPad: 19072 B code, 0 B in inline-asm functions</title>
+<rect x="287.1" y="150.0" width="97.6" height="101.9" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="291.1" y="164.0" fill="#0d1117" font-size="11">MGPad</text>
+</g>
+<g><title>cs4/Seimei/src/Map: 18892 B code, 0 B in inline-asm functions</title>
+<rect x="287.1" y="251.9" width="97.6" height="101.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="291.1" y="265.9" fill="#0d1117" font-size="11">Map</text>
+</g>
+<g><title>cs4/Seimei/src/menu/MenuItem: 15052 B code, 0 B in inline-asm functions</title>
+<rect x="287.1" y="352.9" width="97.6" height="80.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="291.1" y="366.9" fill="#0d1117" font-size="11">MenuItem</text>
+</g>
+<g><title>cs4/Seimei/src/sfx/SfxDraw: 14944 B code, 5356 B in inline-asm functions</title>
+<rect x="287.1" y="433.4" width="97.6" height="79.9" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="287.1" y="484.6" width="97.6" height="28.6" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="291.1" y="447.4" fill="#0d1117" font-size="11">SfxDraw</text>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/GameFunc: 14668 B code, 0 B in inline-asm functions</title>
+<rect x="287.1" y="513.2" width="97.6" height="78.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="291.1" y="527.2" fill="#0d1117" font-size="11">GameFunc</text>
+</g>
+<g><title>cs4/Seimei/src/Draw: 14664 B code, 120 B in inline-asm functions</title>
+<rect x="287.1" y="591.6" width="97.6" height="78.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="287.1" y="669.4" width="97.6" height="0.6" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="291.1" y="605.6" fill="#0d1117" font-size="11">Draw</text>
+</g>
+<g><title>cs4/Seimei/src/My: 14580 B code, 1056 B in inline-asm functions</title>
+<rect x="384.7" y="150.0" width="81.0" height="93.9" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="384.7" y="237.1" width="81.0" height="6.8" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="388.7" y="164.0" fill="#0d1117" font-size="11">My</text>
+</g>
+<g><title>cs4/Seimei/src/MyAct: 14156 B code, 0 B in inline-asm functions</title>
+<rect x="384.7" y="243.9" width="81.0" height="91.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="388.7" y="257.9" fill="#0d1117" font-size="11">MyAct</text>
+</g>
+<g><title>cs4/Seimei/src/Anim: 13824 B code, 760 B in inline-asm functions</title>
+<rect x="384.7" y="335.0" width="81.0" height="89.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="384.7" y="419.2" width="81.0" height="4.9" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="388.7" y="349.0" fill="#0d1117" font-size="11">Anim</text>
+</g>
+<g><title>cs4/Seimei/src/Script: 13716 B code, 0 B in inline-asm functions</title>
+<rect x="384.7" y="424.1" width="81.0" height="88.3" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="388.7" y="438.1" fill="#0d1117" font-size="11">Script</text>
+</g>
+<g><title>cs4/Seimei/src/Filter: 12328 B code, 0 B in inline-asm functions</title>
+<rect x="384.7" y="512.4" width="81.0" height="79.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="388.7" y="526.4" fill="#0d1117" font-size="11">Filter</text>
+</g>
+<g><title>cs4/Seimei/src/Hmd: 12148 B code, 0 B in inline-asm functions</title>
+<rect x="384.7" y="591.8" width="81.0" height="78.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="388.7" y="605.8" fill="#0d1117" font-size="11">Hmd</text>
+</g>
+<g><title>cs4/Seimei/src/sfx/SfxCommon: 11148 B code, 1512 B in inline-asm functions</title>
+<rect x="465.7" y="150.0" width="77.6" height="75.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="465.7" y="214.8" width="77.6" height="10.2" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="469.7" y="164.0" fill="#0d1117" font-size="11">SfxCommon</text>
+</g>
+<g><title>cs4/Seimei/src/Riddle: 11116 B code, 0 B in inline-asm functions</title>
+<rect x="543.3" y="150.0" width="77.4" height="75.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="547.3" y="164.0" fill="#0d1117" font-size="11">Riddle</text>
+</g>
+<g><title>cs4/Seimei/src/Shadow: 10904 B code, 0 B in inline-asm functions</title>
+<rect x="620.6" y="150.0" width="75.9" height="75.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="624.6" y="164.0" fill="#0d1117" font-size="11">Shadow</text>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/TMKSpriteInit: 10760 B code, 0 B in inline-asm functions</title>
+<rect x="696.5" y="150.0" width="74.9" height="75.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Camera: 10108 B code, 600 B in inline-asm functions</title>
+<rect x="771.4" y="150.0" width="70.3" height="75.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="771.4" y="220.5" width="70.3" height="4.4" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="775.4" y="164.0" fill="#0d1117" font-size="11">Camera</text>
+</g>
+<g><title>cs4/Seimei/src/Object: 10092 B code, 272 B in inline-asm functions</title>
+<rect x="841.7" y="150.0" width="70.2" height="75.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="841.7" y="222.9" width="70.2" height="2.0" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="845.7" y="164.0" fill="#0d1117" font-size="11">Object</text>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/MGAnime: 9780 B code, 0 B in inline-asm functions</title>
+<rect x="911.9" y="150.0" width="68.1" height="75.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="915.9" y="164.0" fill="#0d1117" font-size="11">MGAnime</text>
+</g>
+<g><title>cs4/Seimei/src/MyThk: 9468 B code, 420 B in inline-asm functions</title>
+<rect x="465.7" y="225.0" width="65.3" height="75.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="465.7" y="297.3" width="65.3" height="3.4" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="469.7" y="239.0" fill="#0d1117" font-size="11">MyThk</text>
+</g>
+<g><title>cs4/Seimei/fslib/lib/fslibsdsynth: 9432 B code, 0 B in inline-asm functions</title>
+<rect x="465.7" y="300.6" width="65.3" height="75.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/menu/MenuCtrl: 9332 B code, 0 B in inline-asm functions</title>
+<rect x="465.7" y="376.0" width="65.3" height="74.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="469.7" y="390.0" fill="#0d1117" font-size="11">MenuCtrl</text>
+</g>
+<g><title>cs4/Seimei/fslib/lib/FsFontDraw: 9176 B code, 0 B in inline-asm functions</title>
+<rect x="465.7" y="450.5" width="65.3" height="73.3" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Ene: 9164 B code, 132 B in inline-asm functions</title>
+<rect x="465.7" y="523.8" width="65.3" height="73.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="465.7" y="596.0" width="65.3" height="1.1" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="469.7" y="537.8" fill="#0d1117" font-size="11">Ene</text>
+</g>
+<g><title>cs4/Seimei/fslib/lib/FsFont: 9132 B code, 0 B in inline-asm functions</title>
+<rect x="465.7" y="597.0" width="65.3" height="73.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="469.7" y="611.0" fill="#0d1117" font-size="11">FsFont</text>
+</g>
+<g><title>cs4/Seimei/src/FrontEnd/FrontEnd_Card: 8852 B code, 296 B in inline-asm functions</title>
+<rect x="531.0" y="225.0" width="66.4" height="69.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="531.0" y="292.2" width="66.4" height="2.3" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/EneAct: 8316 B code, 244 B in inline-asm functions</title>
+<rect x="531.0" y="294.5" width="66.4" height="65.3" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="531.0" y="358.0" width="66.4" height="1.9" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="535.0" y="308.5" fill="#0d1117" font-size="11">EneAct</text>
+</g>
+<g><title>cs4/Seimei/src/Rta: 8220 B code, 0 B in inline-asm functions</title>
+<rect x="531.0" y="359.9" width="66.4" height="64.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="535.0" y="373.9" fill="#0d1117" font-size="11">Rta</text>
+</g>
+<g><title>cs4/Seimei/src/Drama: 8040 B code, 680 B in inline-asm functions</title>
+<rect x="531.0" y="424.5" width="66.4" height="63.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="531.0" y="482.3" width="66.4" height="5.3" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="535.0" y="438.5" fill="#0d1117" font-size="11">Drama</text>
+</g>
+<g><title>unklib_00215AF0: 7912 B code, 0 B in inline-asm functions</title>
+<rect x="531.0" y="487.6" width="66.4" height="62.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MemoryCard: 7692 B code, 0 B in inline-asm functions</title>
+<rect x="531.0" y="549.8" width="66.4" height="60.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/menu/KuonMenu: 7604 B code, 0 B in inline-asm functions</title>
+<rect x="531.0" y="610.2" width="66.4" height="59.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="535.0" y="624.2" fill="#0d1117" font-size="11">KuonMenu</text>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/sgh/sghEneThk: 7240 B code, 0 B in inline-asm functions</title>
+<rect x="597.4" y="225.0" width="66.1" height="57.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Dizzy: 7236 B code, 0 B in inline-asm functions</title>
+<rect x="663.4" y="225.0" width="66.0" height="57.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="667.4" y="239.0" fill="#0d1117" font-size="11">Dizzy</text>
+</g>
+<g><title>cs4/Seimei/src/Sound/VagStm: 7160 B code, 0 B in inline-asm functions</title>
+<rect x="729.5" y="225.0" width="65.3" height="57.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="733.5" y="239.0" fill="#0d1117" font-size="11">VagStm</text>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/MGInit: 7092 B code, 0 B in inline-asm functions</title>
+<rect x="794.8" y="225.0" width="64.7" height="57.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="798.8" y="239.0" fill="#0d1117" font-size="11">MGInit</text>
+</g>
+<g><title>cs4/Seimei/src/EneThk: 6700 B code, 0 B in inline-asm functions</title>
+<rect x="859.5" y="225.0" width="61.1" height="57.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="863.5" y="239.0" fill="#0d1117" font-size="11">EneThk</text>
+</g>
+<g><title>cs4/Seimei/src/sfx/SfxFlicker: 6508 B code, 2800 B in inline-asm functions</title>
+<rect x="920.6" y="225.0" width="59.4" height="57.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="920.6" y="257.5" width="59.4" height="24.6" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>unklib_0019FA70: 6364 B code, 0 B in inline-asm functions</title>
+<rect x="597.4" y="282.1" width="57.7" height="57.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Vmd: 6232 B code, 0 B in inline-asm functions</title>
+<rect x="655.1" y="282.1" width="56.5" height="57.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="659.1" y="296.1" fill="#0d1117" font-size="11">Vmd</text>
+</g>
+<g><title>unklib_0019E160: 6140 B code, 0 B in inline-asm functions</title>
+<rect x="711.6" y="282.1" width="55.7" height="57.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Peep: 6012 B code, 0 B in inline-asm functions</title>
+<rect x="767.3" y="282.1" width="54.5" height="57.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="771.3" y="296.1" fill="#0d1117" font-size="11">Peep</text>
+</g>
+<g><title>cs4/Seimei/src/Sound/SndVoice: 5988 B code, 280 B in inline-asm functions</title>
+<rect x="821.8" y="282.1" width="54.3" height="57.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="821.8" y="337.0" width="54.3" height="2.7" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/TexEffect: 5888 B code, 0 B in inline-asm functions</title>
+<rect x="876.1" y="282.1" width="53.4" height="57.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/sgh/sghKoma: 5564 B code, 0 B in inline-asm functions</title>
+<rect x="929.5" y="282.1" width="50.5" height="57.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/fslib/lib/fslibscr: 5540 B code, 0 B in inline-asm functions</title>
+<rect x="597.4" y="339.7" width="52.0" height="55.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Msg: 5072 B code, 0 B in inline-asm functions</title>
+<rect x="597.4" y="395.2" width="52.0" height="50.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="601.4" y="409.2" fill="#0d1117" font-size="11">Msg</text>
+</g>
+<g><title>cs4/Seimei/src/Model: 4660 B code, 216 B in inline-asm functions</title>
+<rect x="597.4" y="446.0" width="52.0" height="46.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="597.4" y="490.6" width="52.0" height="2.2" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="601.4" y="460.0" fill="#0d1117" font-size="11">Model</text>
+</g>
+<g><title>cs4/Seimei/src/Tex: 4648 B code, 0 B in inline-asm functions</title>
+<rect x="597.4" y="492.8" width="52.0" height="46.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="601.4" y="506.8" fill="#0d1117" font-size="11">Tex</text>
+</g>
+<g><title>cs4/Seimei/src/sfx/SfxTracer: 4540 B code, 1440 B in inline-asm functions</title>
+<rect x="597.4" y="539.4" width="52.0" height="45.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="597.4" y="570.4" width="52.0" height="14.4" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/menu/Menu: 4320 B code, 0 B in inline-asm functions</title>
+<rect x="597.4" y="584.9" width="52.0" height="43.3" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="601.4" y="598.9" fill="#0d1117" font-size="11">Menu</text>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/sgh/sghMode: 4172 B code, 596 B in inline-asm functions</title>
+<rect x="597.4" y="628.2" width="52.0" height="41.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="597.4" y="664.0" width="52.0" height="6.0" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Dss: 4128 B code, 0 B in inline-asm functions</title>
+<rect x="649.4" y="339.7" width="44.3" height="48.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="653.4" y="353.7" fill="#0d1117" font-size="11">Dss</text>
+</g>
+<g><title>cs4/Seimei/src/EneDamage: 4124 B code, 944 B in inline-asm functions</title>
+<rect x="649.4" y="388.2" width="44.3" height="48.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="649.4" y="425.6" width="44.3" height="11.1" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/ItemMng: 4116 B code, 92 B in inline-asm functions</title>
+<rect x="649.4" y="436.7" width="44.3" height="48.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="649.4" y="484.1" width="44.3" height="1.1" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/fslib/lib/fslibpa2: 4068 B code, 0 B in inline-asm functions</title>
+<rect x="649.4" y="485.2" width="44.3" height="47.9" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0010: 4036 B code, 0 B in inline-asm functions</title>
+<rect x="649.4" y="533.0" width="44.3" height="47.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0006: 3904 B code, 1592 B in inline-asm functions</title>
+<rect x="649.4" y="580.5" width="44.3" height="45.9" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="649.4" y="607.7" width="44.3" height="18.7" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Mirror: 3704 B code, 0 B in inline-asm functions</title>
+<rect x="649.4" y="626.4" width="44.3" height="43.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/sfx/SfxFormat: 3664 B code, 0 B in inline-asm functions</title>
+<rect x="693.8" y="339.7" width="42.8" height="44.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Sound/Snd: 3616 B code, 616 B in inline-asm functions</title>
+<rect x="736.5" y="339.7" width="42.2" height="44.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="736.5" y="376.7" width="42.2" height="7.6" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+<text x="740.5" y="353.7" fill="#0d1117" font-size="11">Snd</text>
+</g>
+<g><title>cs4/Seimei/src/menu/MenuTD: 3496 B code, 0 B in inline-asm functions</title>
+<rect x="778.8" y="339.7" width="40.8" height="44.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/sfx/Sfx: 3488 B code, 0 B in inline-asm functions</title>
+<rect x="819.6" y="339.7" width="40.7" height="44.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="823.6" y="353.7" fill="#0d1117" font-size="11">Sfx</text>
+</g>
+<g><title>cs4/Seimei/src/Pad: 3456 B code, 0 B in inline-asm functions</title>
+<rect x="860.3" y="339.7" width="40.4" height="44.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="864.3" y="353.7" fill="#0d1117" font-size="11">Pad</text>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/sgh/sghPad: 3408 B code, 0 B in inline-asm functions</title>
+<rect x="900.7" y="339.7" width="39.8" height="44.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/sgh/sghMsg: 3384 B code, 0 B in inline-asm functions</title>
+<rect x="940.5" y="339.7" width="39.5" height="44.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MathUtil: 3276 B code, 1816 B in inline-asm functions</title>
+<rect x="693.8" y="384.3" width="39.6" height="43.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="693.8" y="403.6" width="39.6" height="24.0" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Game: 3264 B code, 0 B in inline-asm functions</title>
+<rect x="693.8" y="427.5" width="39.6" height="43.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="697.8" y="441.5" fill="#0d1117" font-size="11">Game</text>
+</g>
+<g><title>cs4/Seimei/src/sfx/SfxBugs: 3252 B code, 0 B in inline-asm functions</title>
+<rect x="693.8" y="470.6" width="39.6" height="42.9" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Main: 3084 B code, 0 B in inline-asm functions</title>
+<rect x="693.8" y="513.5" width="39.6" height="40.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<text x="697.8" y="527.5" fill="#0d1117" font-size="11">Main</text>
+</g>
+<g><title>cs4/Seimei/src/sfx/SfxPLight: 3000 B code, 0 B in inline-asm functions</title>
+<rect x="693.8" y="554.1" width="39.6" height="39.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/sfx/SfxDomanString: 2960 B code, 1884 B in inline-asm functions</title>
+<rect x="693.8" y="593.7" width="39.6" height="39.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="693.8" y="607.9" width="39.6" height="24.8" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Sound/SndSq: 2824 B code, 208 B in inline-asm functions</title>
+<rect x="693.8" y="632.8" width="39.6" height="37.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="693.8" y="667.3" width="39.6" height="2.7" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/fslib/lib/fsspummng: 2824 B code, 0 B in inline-asm functions</title>
+<rect x="733.3" y="384.3" width="37.0" height="39.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0051: 2784 B code, 0 B in inline-asm functions</title>
+<rect x="770.3" y="384.3" width="36.5" height="39.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E022Act: 2780 B code, 328 B in inline-asm functions</title>
+<rect x="806.8" y="384.3" width="36.4" height="39.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="806.8" y="419.5" width="36.4" height="4.7" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Font: 2716 B code, 0 B in inline-asm functions</title>
+<rect x="843.2" y="384.3" width="35.6" height="39.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/fslib/lib/fslibsd: 2644 B code, 0 B in inline-asm functions</title>
+<rect x="878.7" y="384.3" width="34.6" height="39.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Sprite: 2556 B code, 0 B in inline-asm functions</title>
+<rect x="913.4" y="384.3" width="33.5" height="39.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/sgh/sghMap: 2532 B code, 0 B in inline-asm functions</title>
+<rect x="946.8" y="384.3" width="33.2" height="39.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Fade: 2460 B code, 0 B in inline-asm functions</title>
+<rect x="733.3" y="424.2" width="35.3" height="36.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/sgh/sghDice: 2436 B code, 0 B in inline-asm functions</title>
+<rect x="733.3" y="460.6" width="35.3" height="36.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/DrawOT: 2400 B code, 872 B in inline-asm functions</title>
+<rect x="733.3" y="496.6" width="35.3" height="35.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="733.3" y="519.2" width="35.3" height="12.9" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/PointLight: 2368 B code, 0 B in inline-asm functions</title>
+<rect x="733.3" y="532.1" width="35.3" height="35.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Load: 2356 B code, 0 B in inline-asm functions</title>
+<rect x="733.3" y="567.1" width="35.3" height="34.9" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/sfx/SfxModel: 2352 B code, 0 B in inline-asm functions</title>
+<rect x="733.3" y="602.0" width="35.3" height="34.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0031: 2244 B code, 0 B in inline-asm functions</title>
+<rect x="733.3" y="636.8" width="35.3" height="33.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E011Thk: 2200 B code, 0 B in inline-asm functions</title>
+<rect x="768.6" y="424.2" width="36.9" height="31.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E003Thk: 2200 B code, 0 B in inline-asm functions</title>
+<rect x="805.5" y="424.2" width="36.9" height="31.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E022Thk: 2104 B code, 0 B in inline-asm functions</title>
+<rect x="842.4" y="424.2" width="35.3" height="31.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/MiniGame: 2072 B code, 0 B in inline-asm functions</title>
+<rect x="877.8" y="424.2" width="34.8" height="31.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Scene: 2012 B code, 0 B in inline-asm functions</title>
+<rect x="912.6" y="424.2" width="33.8" height="31.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/List: 2004 B code, 0 B in inline-asm functions</title>
+<rect x="946.4" y="424.2" width="33.6" height="31.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/MGSprite: 1956 B code, 0 B in inline-asm functions</title>
+<rect x="768.6" y="455.2" width="32.2" height="31.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Cdvd: 1948 B code, 0 B in inline-asm functions</title>
+<rect x="800.7" y="455.2" width="32.0" height="31.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0033: 1872 B code, 0 B in inline-asm functions</title>
+<rect x="832.8" y="455.2" width="30.8" height="31.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MyDamage: 1824 B code, 384 B in inline-asm functions</title>
+<rect x="863.6" y="455.2" width="30.0" height="31.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="863.6" y="480.3" width="30.0" height="6.7" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Damage: 1772 B code, 0 B in inline-asm functions</title>
+<rect x="893.6" y="455.2" width="29.2" height="31.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0035: 1768 B code, 0 B in inline-asm functions</title>
+<rect x="922.7" y="455.2" width="29.1" height="31.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Vram: 1712 B code, 0 B in inline-asm functions</title>
+<rect x="951.8" y="455.2" width="28.2" height="31.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/sfx/SfxFileIO: 1688 B code, 0 B in inline-asm functions</title>
+<rect x="768.6" y="486.9" width="27.9" height="31.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E011Act: 1684 B code, 0 B in inline-asm functions</title>
+<rect x="768.6" y="518.5" width="27.9" height="31.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E003Act: 1684 B code, 0 B in inline-asm functions</title>
+<rect x="768.6" y="550.0" width="27.9" height="31.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/DepthAlpha: 1608 B code, 0 B in inline-asm functions</title>
+<rect x="768.6" y="581.4" width="27.9" height="30.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/KuonMsg: 1596 B code, 96 B in inline-asm functions</title>
+<rect x="768.6" y="611.5" width="27.9" height="29.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="768.6" y="639.5" width="27.9" height="1.8" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Binder: 1536 B code, 0 B in inline-asm functions</title>
+<rect x="768.6" y="641.3" width="27.9" height="28.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Blast: 1476 B code, 0 B in inline-asm functions</title>
+<rect x="796.5" y="486.9" width="28.7" height="26.9" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P025Act: 1472 B code, 0 B in inline-asm functions</title>
+<rect x="796.5" y="513.8" width="28.7" height="26.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Movie: 1464 B code, 0 B in inline-asm functions</title>
+<rect x="796.5" y="540.6" width="28.7" height="26.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/File: 1444 B code, 0 B in inline-asm functions</title>
+<rect x="796.5" y="567.3" width="28.7" height="26.3" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/sfx/SfxPostEffect: 1420 B code, 0 B in inline-asm functions</title>
+<rect x="796.5" y="593.5" width="28.7" height="25.9" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Memory: 1392 B code, 0 B in inline-asm functions</title>
+<rect x="796.5" y="619.4" width="28.7" height="25.3" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/EtcEvent: 1388 B code, 0 B in inline-asm functions</title>
+<rect x="796.5" y="644.7" width="28.7" height="25.3" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/lib/libaio: 1376 B code, 0 B in inline-asm functions</title>
+<rect x="825.1" y="486.9" width="26.9" height="26.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event: 1344 B code, 0 B in inline-asm functions</title>
+<rect x="852.0" y="486.9" width="26.3" height="26.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0040: 1324 B code, 0 B in inline-asm functions</title>
+<rect x="878.3" y="486.9" width="25.9" height="26.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/sfx/StaticList: 1304 B code, 0 B in inline-asm functions</title>
+<rect x="904.2" y="486.9" width="25.5" height="26.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0002: 1292 B code, 0 B in inline-asm functions</title>
+<rect x="929.7" y="486.9" width="25.3" height="26.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E016Thk: 1284 B code, 0 B in inline-asm functions</title>
+<rect x="954.9" y="486.9" width="25.1" height="26.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Sound/SndReverb: 1284 B code, 0 B in inline-asm functions</title>
+<rect x="825.1" y="513.6" width="27.3" height="24.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MsgFile: 1256 B code, 0 B in inline-asm functions</title>
+<rect x="852.5" y="513.6" width="26.7" height="24.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P027Thk: 1220 B code, 0 B in inline-asm functions</title>
+<rect x="879.2" y="513.6" width="26.0" height="24.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/menu/KnMenuWind: 1208 B code, 0 B in inline-asm functions</title>
+<rect x="905.2" y="513.6" width="25.7" height="24.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Sound/Sec: 1160 B code, 0 B in inline-asm functions</title>
+<rect x="930.9" y="513.6" width="24.7" height="24.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/sfx/SfxFog: 1148 B code, 0 B in inline-asm functions</title>
+<rect x="955.6" y="513.6" width="24.4" height="24.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/ClothSimulator: 1144 B code, 0 B in inline-asm functions</title>
+<rect x="825.1" y="538.1" width="22.0" height="27.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/msg_util: 1140 B code, 0 B in inline-asm functions</title>
+<rect x="825.1" y="565.3" width="22.0" height="27.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/sgh/sghSprite: 1128 B code, 0 B in inline-asm functions</title>
+<rect x="825.1" y="592.3" width="22.0" height="26.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E016Act: 1080 B code, 0 B in inline-asm functions</title>
+<rect x="825.1" y="619.1" width="22.0" height="25.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MovePath: 1064 B code, 0 B in inline-asm functions</title>
+<rect x="825.1" y="644.7" width="22.0" height="25.3" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P004Act: 1060 B code, 0 B in inline-asm functions</title>
+<rect x="847.1" y="538.1" width="24.6" height="22.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E042Act: 1048 B code, 0 B in inline-asm functions</title>
+<rect x="847.1" y="560.6" width="24.6" height="22.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0034: 1048 B code, 0 B in inline-asm functions</title>
+<rect x="847.1" y="582.9" width="24.6" height="22.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P020Act: 1036 B code, 0 B in inline-asm functions</title>
+<rect x="847.1" y="605.1" width="24.6" height="22.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E044Act: 1024 B code, 60 B in inline-asm functions</title>
+<rect x="847.1" y="627.1" width="24.6" height="21.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="847.1" y="647.6" width="24.6" height="1.3" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/CharHit: 996 B code, 432 B in inline-asm functions</title>
+<rect x="847.1" y="648.9" width="24.6" height="21.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="847.1" y="660.8" width="24.6" height="9.2" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Debug: 992 B code, 0 B in inline-asm functions</title>
+<rect x="871.7" y="538.1" width="22.4" height="23.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E032Act: 972 B code, 0 B in inline-asm functions</title>
+<rect x="894.1" y="538.1" width="22.0" height="23.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/TmpMenu: 964 B code, 0 B in inline-asm functions</title>
+<rect x="916.0" y="538.1" width="21.8" height="23.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0008: 948 B code, 0 B in inline-asm functions</title>
+<rect x="937.8" y="538.1" width="21.4" height="23.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P018Act: 920 B code, 0 B in inline-asm functions</title>
+<rect x="959.2" y="538.1" width="20.8" height="23.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P019Act: 920 B code, 0 B in inline-asm functions</title>
+<rect x="871.7" y="561.2" width="24.9" height="19.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/AniFile: 840 B code, 0 B in inline-asm functions</title>
+<rect x="896.6" y="561.2" width="22.8" height="19.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0032: 772 B code, 0 B in inline-asm functions</title>
+<rect x="919.4" y="561.2" width="20.9" height="19.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P030Act: 732 B code, 0 B in inline-asm functions</title>
+<rect x="940.3" y="561.2" width="19.8" height="19.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E035Act: 732 B code, 48 B in inline-asm functions</title>
+<rect x="960.2" y="561.2" width="19.8" height="19.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="960.2" y="579.2" width="19.8" height="1.3" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Vu1: 728 B code, 0 B in inline-asm functions</title>
+<rect x="871.7" y="580.5" width="19.9" height="19.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/fslib/lib/FsFontReplace: 728 B code, 0 B in inline-asm functions</title>
+<rect x="871.7" y="599.6" width="19.9" height="19.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P004Thk: 720 B code, 0 B in inline-asm functions</title>
+<rect x="871.7" y="618.7" width="19.9" height="18.9" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/sfx/SfxScriptIF: 620 B code, 0 B in inline-asm functions</title>
+<rect x="871.7" y="637.6" width="19.9" height="16.3" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/sgh/sghDraw: 612 B code, 0 B in inline-asm functions</title>
+<rect x="871.7" y="653.9" width="19.9" height="16.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0085: 584 B code, 152 B in inline-asm functions</title>
+<rect x="891.6" y="580.5" width="18.3" height="16.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="891.6" y="592.8" width="18.3" height="4.3" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>unklib_001720A0: 576 B code, 0 B in inline-asm functions</title>
+<rect x="909.9" y="580.5" width="18.1" height="16.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P008Act: 576 B code, 0 B in inline-asm functions</title>
+<rect x="927.9" y="580.5" width="18.1" height="16.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MultiStm: 568 B code, 0 B in inline-asm functions</title>
+<rect x="946.0" y="580.5" width="17.8" height="16.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/sgh/sghMarker: 516 B code, 0 B in inline-asm functions</title>
+<rect x="963.8" y="580.5" width="16.2" height="16.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E034Act: 512 B code, 496 B in inline-asm functions</title>
+<rect x="891.6" y="597.1" width="14.6" height="18.3" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="891.6" y="597.7" width="14.6" height="17.7" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P025Thk: 512 B code, 0 B in inline-asm functions</title>
+<rect x="891.6" y="615.4" width="14.6" height="18.3" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/ShadowVolume: 508 B code, 0 B in inline-asm functions</title>
+<rect x="891.6" y="633.7" width="14.6" height="18.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0041: 508 B code, 0 B in inline-asm functions</title>
+<rect x="891.6" y="651.9" width="14.6" height="18.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/MGLoad: 496 B code, 0 B in inline-asm functions</title>
+<rect x="906.2" y="597.1" width="16.6" height="15.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E032Thk: 476 B code, 0 B in inline-asm functions</title>
+<rect x="906.2" y="612.7" width="16.6" height="15.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0083: 468 B code, 0 B in inline-asm functions</title>
+<rect x="906.2" y="627.7" width="16.6" height="14.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E035Thk: 444 B code, 0 B in inline-asm functions</title>
+<rect x="906.2" y="642.4" width="16.6" height="14.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0001: 432 B code, 0 B in inline-asm functions</title>
+<rect x="906.2" y="656.4" width="16.6" height="13.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E034Thk: 428 B code, 0 B in inline-asm functions</title>
+<rect x="922.7" y="597.1" width="15.4" height="14.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/util: 400 B code, 0 B in inline-asm functions</title>
+<rect x="938.2" y="597.1" width="14.4" height="14.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Light: 384 B code, 0 B in inline-asm functions</title>
+<rect x="952.6" y="597.1" width="13.8" height="14.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/String: 376 B code, 0 B in inline-asm functions</title>
+<rect x="966.4" y="597.1" width="13.6" height="14.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/fslib/lib/hit_basic: 340 B code, 0 B in inline-asm functions</title>
+<rect x="922.7" y="611.6" width="12.3" height="14.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/rta_util: 316 B code, 0 B in inline-asm functions</title>
+<rect x="935.0" y="611.6" width="11.4" height="14.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/fslib/lib/fslibvu0: 312 B code, 312 B in inline-asm functions</title>
+<rect x="946.5" y="611.6" width="11.3" height="14.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="946.5" y="611.6" width="11.3" height="14.4" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P027Act: 308 B code, 0 B in inline-asm functions</title>
+<rect x="957.7" y="611.6" width="11.1" height="14.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/MGFont: 308 B code, 0 B in inline-asm functions</title>
+<rect x="968.9" y="611.6" width="11.1" height="14.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/sgh/sghMain: 308 B code, 0 B in inline-asm functions</title>
+<rect x="922.7" y="626.0" width="13.9" height="11.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P007Act: 296 B code, 0 B in inline-asm functions</title>
+<rect x="922.7" y="637.6" width="13.9" height="11.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P019Thk: 288 B code, 0 B in inline-asm functions</title>
+<rect x="922.7" y="648.7" width="13.9" height="10.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Mic: 280 B code, 0 B in inline-asm functions</title>
+<rect x="922.7" y="659.5" width="13.9" height="10.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Miz: 272 B code, 0 B in inline-asm functions</title>
+<rect x="936.6" y="626.0" width="11.3" height="12.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P036Act: 268 B code, 0 B in inline-asm functions</title>
+<rect x="948.0" y="626.0" width="11.2" height="12.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/sgh/sghEne: 256 B code, 0 B in inline-asm functions</title>
+<rect x="959.2" y="626.0" width="10.7" height="12.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/sfx/SfxDebug_TmrGraph: 244 B code, 0 B in inline-asm functions</title>
+<rect x="969.8" y="626.0" width="10.2" height="12.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MdlLink: 216 B code, 0 B in inline-asm functions</title>
+<rect x="936.6" y="638.5" width="10.7" height="10.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/FsMsg: 216 B code, 0 B in inline-asm functions</title>
+<rect x="936.6" y="649.0" width="10.7" height="10.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P006Thk: 216 B code, 0 B in inline-asm functions</title>
+<rect x="936.6" y="659.5" width="10.7" height="10.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Mi2: 208 B code, 0 B in inline-asm functions</title>
+<rect x="947.4" y="638.5" width="9.9" height="10.9" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P007Thk: 204 B code, 0 B in inline-asm functions</title>
+<rect x="947.4" y="649.4" width="9.9" height="10.7" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Spirit: 188 B code, 0 B in inline-asm functions</title>
+<rect x="947.4" y="660.1" width="9.9" height="9.9" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/fslib/lib/hit_calc: 184 B code, 88 B in inline-asm functions</title>
+<rect x="957.3" y="638.5" width="11.5" height="8.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="957.3" y="642.9" width="11.5" height="4.0" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Event0009: 180 B code, 0 B in inline-asm functions</title>
+<rect x="968.8" y="638.5" width="11.2" height="8.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P018Thk: 172 B code, 0 B in inline-asm functions</title>
+<rect x="957.3" y="646.9" width="11.5" height="7.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E033Act: 168 B code, 24 B in inline-asm functions</title>
+<rect x="968.8" y="646.9" width="11.2" height="7.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="968.8" y="653.6" width="11.2" height="1.1" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E041Act: 168 B code, 24 B in inline-asm functions</title>
+<rect x="957.3" y="654.7" width="9.7" height="9.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+<rect x="957.3" y="662.5" width="9.7" height="1.3" fill="#d29922" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/Param: 116 B code, 0 B in inline-asm functions</title>
+<rect x="957.3" y="663.8" width="9.7" height="6.2" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/fslib/lib/fslibhit: 112 B code, 0 B in inline-asm functions</title>
+<rect x="967.0" y="654.7" width="6.5" height="9.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/fslib/lib/hit_info: 112 B code, 0 B in inline-asm functions</title>
+<rect x="973.5" y="654.7" width="6.5" height="9.0" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MCIconData: 24 B code, 0 B in inline-asm functions</title>
+<rect x="967.0" y="663.7" width="4.0" height="3.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/P030Thk: 24 B code, 0 B in inline-asm functions</title>
+<rect x="967.0" y="666.9" width="4.0" height="3.1" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/fslib/lib/FsFontRect: 20 B code, 0 B in inline-asm functions</title>
+<rect x="971.0" y="663.7" width="3.0" height="3.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/SandEffect: 16 B code, 0 B in inline-asm functions</title>
+<rect x="971.0" y="667.2" width="3.0" height="2.8" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/sgh/sghTime: 16 B code, 0 B in inline-asm functions</title>
+<rect x="974.0" y="663.7" width="3.4" height="2.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E031Act: 12 B code, 0 B in inline-asm functions</title>
+<rect x="977.4" y="663.7" width="2.6" height="2.4" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/MiniGame/sgh/sgh: 12 B code, 0 B in inline-asm functions</title>
+<rect x="974.0" y="666.2" width="2.7" height="2.3" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E028Act: 8 B code, 0 B in inline-asm functions</title>
+<rect x="974.0" y="668.5" width="2.7" height="1.5" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E036Act: 8 B code, 0 B in inline-asm functions</title>
+<rect x="976.7" y="666.2" width="1.6" height="2.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E037Act: 8 B code, 0 B in inline-asm functions</title>
+<rect x="978.4" y="666.2" width="1.6" height="2.6" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<g><title>cs4/Seimei/src/E023Act: 8 B code, 0 B in inline-asm functions</title>
+<rect x="976.7" y="668.7" width="3.3" height="1.3" fill="#3fb950" stroke="#0d1117" stroke-width="1"/>
+</g>
+<text x="20" y="696" fill="#8b949e" font-size="11">Generated by tools/progress_svg.py from config/report.json and src/</text>
+</svg>

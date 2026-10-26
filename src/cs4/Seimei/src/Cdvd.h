@@ -117,10 +117,6 @@ typedef struct /* @anon3 */ {
 } LPCDVD; // size: 0x4, address: 0x257528
 
 extern unsigned int GlobalLoadTimer; // size: 0x4, address: 0x257894
-static CDVDREADST CdvdReadSt[256];
-static LPSETCDVD* lpSetCdvd = (LPSETCDVD* )CdvdReadSt;
-static LPLASTCDVD* lpLastCdvd = (LPLASTCDVD* )CdvdReadSt;
-static LPCDVDREAD* lpCdvdRead = (LPCDVDREAD* )CdvdReadSt;
 
 void InitCdvdRead(void);
 void MakeCdvdReadPath(s8* full, s8* root, s8* fname);

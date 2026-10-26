@@ -45,6 +45,17 @@ CROSS = "mips-ps2-decompals-"
 
 COMPILER = "mwcps2-3.0b52-030722"
 COMPILER_FLAGS = "-O4,p -sym on -str readonly -cwd source -inline deferred"
+GCC_COMPILER = "ee-gcc2.96"
+GCC_VERSION = "2.96-ee-001003-1"
+CC_RULE_OVERRIDES = {
+    Path("../src/unklib_001720A0.c"): "cc-gcc",
+    # units whose original compilation followed something that had already used a0/a1 for soft-double helper calls
+    # (see tools/cc/prime/prime_dp.c): compiled in one mwccps2 process after the primer
+    Path("../src/cs4/Seimei/src/MiniGame/sgh/sghKoma.c"): "cc-prime",
+    Path("../src/cs4/Seimei/src/menu/MenuItem.c"): "cc-prime",
+    Path("../src/cs4/Seimei/src/menu/KnMenuModel.c"): "cc-prime",
+}
+PRIME_DIR = TOOLS_DIR / "cc" / "prime"
 
 PLATFORM = sys.platform == "darwin" and "macos" or "x86_64"
 WIBO = f"{TOOLS_DIR}/wibo-{PLATFORM}"
@@ -157,6 +168,21 @@ def build_stuff(
 
     src_path = Path(config["options"]["src_path"])
     game_compile_cmd, common_includes = make_compiler_cmd(config_dir, src_path, language)
+    gcc_dir = Path(os.path.relpath(TOOLS_DIR / "cc" / GCC_COMPILER, config_dir))
+    gcc_lib = gcc_dir / "lib" / "gcc-lib" / "ee" / GCC_VERSION
+    gcc_inputs = [
+        str(gcc_dir / "bin" / "ee-gcc"),
+        str(gcc_lib / "cc1"),
+        str(gcc_lib / "cpp0"),
+        str(gcc_dir / "ee" / "bin" / "as"),
+    ]
+    gcc_compile_cmd = (
+        f"{gcc_dir}/bin/ee-gcc -B{gcc_lib}/ -B{gcc_dir}/ee/bin/ "
+        f"-c -O2 -G8 -mno-abicalls -fno-pic {common_includes}"
+    )
+
+    prime_dir = Path(os.path.relpath(PRIME_DIR, config_dir))
+    prime_inputs = [str(prime_dir / "prime_dp.c"), str(prime_dir / "prime_cc.sh")]
 
     built_objects: set[Path] = set()
     progress_objects: set[str] = set()
@@ -168,6 +194,8 @@ def build_stuff(
         variables: dict[str, str] = {},
         implicit_outputs: list[str] = [],
     ):
+        if task == "cc":
+            task = CC_RULE_OVERRIDES.get(src_paths[0], task)
         if not isinstance(object_paths, list):
             object_paths = [object_paths]
 
@@ -212,14 +240,21 @@ def build_stuff(
                 inputs=[str(s) for s in src_paths],
                 variables=variables,
                 implicit_outputs=implicit_outputs,
+                implicit=gcc_inputs if task == "cc-gcc" else (prime_inputs if task == "cc-prime" else None),
             )
 
             if transit_strs:
+                transit_paths = [
+                    (Path("../src") / s.relative_to("asm")).with_suffix(".c")
+                    for s in src_paths
+                ]
+                transit_rule = CC_RULE_OVERRIDES.get(transit_paths[0], "cc")
                 ninja.build(
                     outputs=transit_strs,
-                    rule="cc",
-                    inputs=[str((Path("../src") / s.relative_to("asm")).with_suffix(".c")) for s in src_paths],
+                    rule=transit_rule,
+                    inputs=[str(s) for s in transit_paths],
                     variables=variables,
+                    implicit=gcc_inputs if transit_rule == "cc-gcc" else (prime_inputs if transit_rule == "cc-prime" else None),
                 )
                 progress_objects.update(transit_strs)
             else:
@@ -264,6 +299,18 @@ def build_stuff(
         "cc",
         description="cc $in",
         command=f"{game_compile_cmd} $in -o $out",
+    )
+
+    ninja.rule(
+        "cc-prime",
+        description="cc (primed) $in",
+        command=f"{prime_dir}/prime_cc.sh {prime_dir}/prime_dp.c $out {game_compile_cmd} $in",
+    )
+
+    ninja.rule(
+        "cc-gcc",
+        description="ee-gcc $in",
+        command=f"{gcc_compile_cmd} $in -o $out",
     )
 
     #ninja.rule(
@@ -557,7 +604,12 @@ def generate_lcf():
                 "\t\t_fbss\t= .;",
                 "",
             ] + block
-        
+
+        # the original link ends every section 0x80-aligned (MenuTD .sdata -> _fbss, unklib_00217A70 tails);
+        # ASM units carry that padding themselves, C objects do not
+        if section_type != ".text":
+            block = ["\t\t. = ALIGN(0x80);"] + block
+
         for entry in objects:
             alignment = entry.segment.ld_align_segment_start 
             if alignment is not None:

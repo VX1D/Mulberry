@@ -28,180 +28,21 @@ int GoToTitleFlag;
 
 GameState GameSt;
 
-void SetGoToEndingFade(void) {
-  SetFadeMng(1, (sceVu0IVECTOR){0}, 30, NULL, SetGoToEndingFlag, 0, 0);
-  SND_RemoveSound();
-}
+static void InitGameSt(signed int argc, char **argv);
+static inline void WaitIop(void);
 
-int CheckGoToEndingFlag(void) { return GoToEndingFlag; }
-
-void SetGoToEndingFlag(void) { GoToEndingFlag = 1; }
-
-void SetGoToTitleFade(void) {
-  SetFadeMng(10, (sceVu0IVECTOR){0}, 30, NULL, SetGoToTitleFlag, 0, 0);
-  GameSt.Pause = 0;
-  SND_RemoveSound();
-}
-
-int CheckGoToTitleFlag(void) { return GoToTitleFlag; }
-
-void SetGoToTitleFlag(void) { GoToTitleFlag = 1; }
-
-void SetKeyConfig(unsigned char Type /* r2 */) { GameSt.KeyConfType = Type; }
-
-static void InitGameSt(signed int argc /* r18 */, char **argv /* r17 */) {
-  int i;
-  sceCdCLOCK rtc;
-
-  memset(&GameSt, 0, sizeof(GameSt));
-  GameSt.DepthTest = 0;
-  GameSt.ShadowTest = 1;
-  GameSt.AmbRate = 1.0f;
-  GameSt.GameLevel = 1;
-  GameSt.LastLanguage = 1;
-  GameSt.VoiceLanguage = 1;
-
-  SetPadVibFlag(1);
-
-  for (i = 0; i < argc; i++) {
-    if (strcmp(argv[i], "@padviboff") == 0) {
-      SetPadVibFlag(0);
-    }
-  }
-
-  GameSt.KeyConfType = 0;
-
-  sceCdReadClock(&rtc);
-  srand(rtc.second);
-}
-
-void SifLoadModule(void) {
-  char acStack_80[128];
-  char acStack_100[128];
-  char acStack_180[128];
-  char acStack_200[128];
-  char acStack_280[128];
-  char acStack_300[128];
-  char acStack_380[128];
-  char acStack_400[128];
-  char acStack_480[128];
-  char acStack_500[128];
-  char acStack_580[128];
-  char acStack_600[128];
-  char acStack_680[128];
-  char acStack_700[128];
-
-  memset(acStack_80, 0, 0x80);
-  sprintf(acStack_80, "%s%s", GetRootPath(), "iop\\sio2man.irx;1");
-  StringCorrectPath4Disc(acStack_80, 1);
-  if (sceSifLoadModule(acStack_80, 0, "") < 0) {
-    exit(0);
-  }
-  memset(acStack_100, 0, 0x80);
-  sprintf(acStack_100, "%s%s", GetRootPath(), "iop\\padman.irx;1");
-  StringCorrectPath4Disc(acStack_100, 1);
-  if (sceSifLoadModule(acStack_100, 0, "") < 0) {
-    exit(0);
-  }
-  memset(acStack_180, 0, 0x80);
-  sprintf(acStack_180, "%s%s", GetRootPath(), "iop\\libsd.irx;1");
-  StringCorrectPath4Disc(acStack_180, 1);
-  if (sceSifLoadModule(acStack_180, 0, "") < 0) {
-    exit(0);
-  }
-  memset(acStack_200, 0, 0x80);
-  sprintf(acStack_200, "%s%s", GetRootPath(), "iop\\sdrdrv.irx;1");
-  StringCorrectPath4Disc(acStack_200, 1);
-  if (sceSifLoadModule(acStack_200, 0, "") < 0) {
-    exit(0);
-  }
-  memset(acStack_280, 0, 0x80);
-  sprintf(acStack_280, "%s%s", GetRootPath(), "iop\\cdvdstm.irx;1");
-  StringCorrectPath4Disc(acStack_280, 1);
-  if (sceSifLoadModule(acStack_280, 0, "") < 0) {
-    exit(0);
-  }
-  memset(acStack_300, 0, 0x80);
-  sprintf(acStack_300, "%s%s", GetRootPath(), "iop\\modmidi.irx;1");
-  StringCorrectPath4Disc(acStack_300, 1);
-  if (sceSifLoadModule(acStack_300, 0, "") < 0) {
-    exit(0);
-  }
-  memset(acStack_380, 0, 0x80);
-  sprintf(acStack_380, "%s%s", GetRootPath(), "iop\\modhsyn.irx;1");
-  StringCorrectPath4Disc(acStack_380, 1);
-  if (sceSifLoadModule(acStack_380, 0, "") < 0) {
-    exit(0);
-  }
-  memset(acStack_400, 0, 0x80);
-  sprintf(acStack_400, "%s%s", GetRootPath(), "iop\\mcman.irx;1");
-  StringCorrectPath4Disc(acStack_400, 1);
-  if (sceSifLoadModule(acStack_400, 0, "") < 0) {
-    exit(0);
-  }
-  memset(acStack_480, 0, 0x80);
-  sprintf(acStack_480, "%s%s", GetRootPath(), "iop\\mcserv.irx;1");
-  StringCorrectPath4Disc(acStack_480, 1);
-  if (sceSifLoadModule(acStack_480, 0, "") < 0) {
-    exit(0);
-  }
-  memset(acStack_500, 0, 0x80);
-  sprintf(acStack_500, "%s%s", GetRootPath(), "iop\\modsein.irx;1");
-  StringCorrectPath4Disc(acStack_500, 1);
-  if (sceSifLoadModule(acStack_500, 0, "") < 0) {
-    exit(0);
-  }
-  memset(acStack_580, 0, 0x80);
-  sprintf(acStack_580, "%s%s", GetRootPath(), "iop\\fssd.irx;1");
-  StringCorrectPath4Disc(acStack_580, 1);
-  if (sceSifLoadModule(acStack_580, 0, "") < 0) {
-    exit(0);
-  }
-  memset(acStack_600, 0, 0x80);
-  sprintf(acStack_600, "%s%s", GetRootPath(), "iop\\fssdsyth.irx;1");
-  StringCorrectPath4Disc(acStack_600, 1);
-  if (sceSifLoadModule(acStack_600, 0, "") < 0) {
-    exit(0);
-  }
-  memset(acStack_680, 0, 0x80);
-  sprintf(acStack_680, "%s%s", GetRootPath(), "iop\\fsmfstrm.irx;1");
-  StringCorrectPath4Disc(acStack_680, 1);
-  if (sceSifLoadModule(acStack_680, 0, "") < 0) {
-    exit(0);
-  }
-  memset(acStack_700, 0, 0x80);
-  sprintf(acStack_700, "%s%s", GetRootPath(), "iop\\fssdivag.irx;1");
-  StringCorrectPath4Disc(acStack_700, 1);
-  if (sceSifLoadModule(acStack_700, 0, "") < 0) {
-    exit(0);
-  }
-}
-
-void ClearTime(void) {
-  *REG_RCNT0_COUNT = 0;
-  gTime = 0;
-  return;
-}
-
-volatile int GetTime(void) {
-  return *(volatile int *)REG_RCNT0_COUNT + gTime * 60000;
-}
-
-void Timer0Handler(void) {
-  gTime += 1;
-  *REG_RCNT0_MODE |= 0x400;
-}
-
-static inline void WaitIop(void) {
-  char sp50[0x80];
-  memset(&sp50, 0, sizeof(sp50));
-  sprintf(sp50, "%s", "cdrom0:\\iop\\ioprp280.img;1");
-  StringCorrectPath4Disc(sp50, 1);
-  while (!sceSifRebootIop(sp50))
-    ;
-  while (!sceSifSyncIop())
-    ;
-}
+/* Kept as named objects so that their .rodata sections are emitted in the
+   original order (MWCC emits string literals in reverse emission order, and
+   the literals of an inlined function last - which would place these after
+   SifLoadModule's instead of before them). */
+static const char sPadviboff[] = "@padviboff";
+static const char sFmt[] = "%s";
+static const char sIoprp[] = "cdrom0:\\iop\\ioprp280.img;1";
+/* sFmt2 is padded to 8 bytes so that sEmpty lands 8 bytes into it - the
+   original addresses its empty string from the .rodata slot right after the
+   "%s%s" literal, which is what SifLoadModule's loads resolve to. */
+static const char sFmt2[8] = "%s%s";
+static const char sEmpty[] = "";
 
 int main(int argc /* r19 */, char **argv /* r18 */) {
   /* anonymous block */  //{
@@ -326,3 +167,168 @@ int main(int argc /* r19 */, char **argv /* r18 */) {
     FreePrevTitleLoop();
   }
 }
+void Timer0Handler(void) {
+  // Range: 0x13AB10 -> 0x13AB34
+  gTime = gTime + 1;
+  *REG_RCNT0_MODE = *REG_RCNT0_MODE | 0x400;
+  return;
+}
+volatile int GetTime(void) {
+  return *(volatile int *)REG_RCNT0_COUNT + gTime * 60000;
+}
+void ClearTime(void) {
+  *REG_RCNT0_COUNT = 0;
+  gTime = 0;
+  return;
+}
+void SifLoadModule(void) {
+  char acStack_80[128];
+  char acStack_100[128];
+  char acStack_180[128];
+  char acStack_200[128];
+  char acStack_280[128];
+  char acStack_300[128];
+  char acStack_380[128];
+  char acStack_400[128];
+  char acStack_480[128];
+  char acStack_500[128];
+  char acStack_580[128];
+  char acStack_600[128];
+  char acStack_680[128];
+  char acStack_700[128];
+
+  memset(acStack_80, 0, 0x80);
+  sprintf(acStack_80, sFmt2, GetRootPath(), "iop\\sio2man.irx;1");
+  StringCorrectPath4Disc(acStack_80, 1);
+  if (sceSifLoadModule(acStack_80, 0, sEmpty) < 0) {
+    exit(0);
+  }
+  memset(acStack_100, 0, 0x80);
+  sprintf(acStack_100, sFmt2, GetRootPath(), "iop\\padman.irx;1");
+  StringCorrectPath4Disc(acStack_100, 1);
+  if (sceSifLoadModule(acStack_100, 0, sEmpty) < 0) {
+    exit(0);
+  }
+  memset(acStack_180, 0, 0x80);
+  sprintf(acStack_180, sFmt2, GetRootPath(), "iop\\libsd.irx;1");
+  StringCorrectPath4Disc(acStack_180, 1);
+  if (sceSifLoadModule(acStack_180, 0, sEmpty) < 0) {
+    exit(0);
+  }
+  memset(acStack_200, 0, 0x80);
+  sprintf(acStack_200, sFmt2, GetRootPath(), "iop\\sdrdrv.irx;1");
+  StringCorrectPath4Disc(acStack_200, 1);
+  if (sceSifLoadModule(acStack_200, 0, sEmpty) < 0) {
+    exit(0);
+  }
+  memset(acStack_280, 0, 0x80);
+  sprintf(acStack_280, sFmt2, GetRootPath(), "iop\\cdvdstm.irx;1");
+  StringCorrectPath4Disc(acStack_280, 1);
+  if (sceSifLoadModule(acStack_280, 0, sEmpty) < 0) {
+    exit(0);
+  }
+  memset(acStack_300, 0, 0x80);
+  sprintf(acStack_300, sFmt2, GetRootPath(), "iop\\modmidi.irx;1");
+  StringCorrectPath4Disc(acStack_300, 1);
+  if (sceSifLoadModule(acStack_300, 0, sEmpty) < 0) {
+    exit(0);
+  }
+  memset(acStack_380, 0, 0x80);
+  sprintf(acStack_380, sFmt2, GetRootPath(), "iop\\modhsyn.irx;1");
+  StringCorrectPath4Disc(acStack_380, 1);
+  if (sceSifLoadModule(acStack_380, 0, sEmpty) < 0) {
+    exit(0);
+  }
+  memset(acStack_400, 0, 0x80);
+  sprintf(acStack_400, sFmt2, GetRootPath(), "iop\\mcman.irx;1");
+  StringCorrectPath4Disc(acStack_400, 1);
+  if (sceSifLoadModule(acStack_400, 0, sEmpty) < 0) {
+    exit(0);
+  }
+  memset(acStack_480, 0, 0x80);
+  sprintf(acStack_480, sFmt2, GetRootPath(), "iop\\mcserv.irx;1");
+  StringCorrectPath4Disc(acStack_480, 1);
+  if (sceSifLoadModule(acStack_480, 0, sEmpty) < 0) {
+    exit(0);
+  }
+  memset(acStack_500, 0, 0x80);
+  sprintf(acStack_500, sFmt2, GetRootPath(), "iop\\modsein.irx;1");
+  StringCorrectPath4Disc(acStack_500, 1);
+  if (sceSifLoadModule(acStack_500, 0, sEmpty) < 0) {
+    exit(0);
+  }
+  memset(acStack_580, 0, 0x80);
+  sprintf(acStack_580, sFmt2, GetRootPath(), "iop\\fssd.irx;1");
+  StringCorrectPath4Disc(acStack_580, 1);
+  if (sceSifLoadModule(acStack_580, 0, sEmpty) < 0) {
+    exit(0);
+  }
+  memset(acStack_600, 0, 0x80);
+  sprintf(acStack_600, sFmt2, GetRootPath(), "iop\\fssdsyth.irx;1");
+  StringCorrectPath4Disc(acStack_600, 1);
+  if (sceSifLoadModule(acStack_600, 0, sEmpty) < 0) {
+    exit(0);
+  }
+  memset(acStack_680, 0, 0x80);
+  sprintf(acStack_680, sFmt2, GetRootPath(), "iop\\fsmfstrm.irx;1");
+  StringCorrectPath4Disc(acStack_680, 1);
+  if (sceSifLoadModule(acStack_680, 0, sEmpty) < 0) {
+    exit(0);
+  }
+  memset(acStack_700, 0, 0x80);
+  sprintf(acStack_700, sFmt2, GetRootPath(), "iop\\fssdivag.irx;1");
+  StringCorrectPath4Disc(acStack_700, 1);
+  if (sceSifLoadModule(acStack_700, 0, sEmpty) < 0) {
+    exit(0);
+  }
+}
+static void InitGameSt(signed int argc /* r18 */, char **argv /* r17 */) {
+  int i;
+  sceCdCLOCK rtc;
+
+  memset(&GameSt, 0, sizeof(GameSt));
+  GameSt.DepthTest = 0;
+  GameSt.ShadowTest = 1;
+  GameSt.AmbRate = 1.0f;
+  GameSt.GameLevel = 1;
+  GameSt.LastLanguage = 1;
+  GameSt.VoiceLanguage = 1;
+
+  SetPadVibFlag(1);
+
+  for (i = 0; i < argc; i++) {
+    if (strcmp(argv[i], sPadviboff) == 0) {
+      SetPadVibFlag(0);
+    }
+  }
+
+  GameSt.KeyConfType = 0;
+
+  sceCdReadClock(&rtc);
+  srand(rtc.second);
+}
+void SetKeyConfig(unsigned char Type /* r2 */) { GameSt.KeyConfType = Type; }
+void SetGoToTitleFlag(void) { GoToTitleFlag = 1; }
+int CheckGoToTitleFlag(void) { return GoToTitleFlag; }
+void SetGoToTitleFade(void) {
+  SetFadeMng(10, (sceVu0IVECTOR){0}, 30, NULL, SetGoToTitleFlag, 0, 0);
+  GameSt.Pause = 0;
+  SND_RemoveSound();
+}
+void SetGoToEndingFlag(void) { GoToEndingFlag = 1; }
+int CheckGoToEndingFlag(void) { return GoToEndingFlag; }
+void SetGoToEndingFade(void) {
+  SetFadeMng(1, (sceVu0IVECTOR){0}, 30, NULL, SetGoToEndingFlag, 0, 0);
+  SND_RemoveSound();
+}
+static inline void WaitIop(void) {
+  char sp50[0x80];
+  memset(&sp50, 0, sizeof(sp50));
+  sprintf(sp50, sFmt, sIoprp);
+  StringCorrectPath4Disc(sp50, 1);
+  while (!sceSifRebootIop(sp50))
+    ;
+  while (!sceSifSyncIop())
+    ;
+}
+
